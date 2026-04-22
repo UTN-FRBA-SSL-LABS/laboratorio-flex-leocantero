@@ -88,17 +88,20 @@ jobs:
       - name: "E3. Reconoce e imprime identificadores"
         id: e3_ident
         continue-on-error: true
-        run: "cd ejercicio3 && ./scanner3 < entrada.txt | grep -q 'identificador: abc'"
+        run: |
+          cd ejercicio3 && ./scanner3 < entrada.txt | grep -q 'identificador: abc'
 
       - name: "E3. Contador de tokens correcto (4 tokens)"
         id: e3_total
         continue-on-error: true
-        run: "cd ejercicio3 && ./scanner3 < entrada.txt | grep -q 'Tokens totales: 4'"
+        run: |
+          cd ejercicio3 && ./scanner3 < entrada.txt | grep -q 'Tokens totales: 4'
 
       - name: "E3. Llama a duplicar() correctamente (El doble es: 8)"
         id: e3_duplicar
         continue-on-error: true
-        run: "cd ejercicio3 && ./scanner3 < entrada.txt | grep -q 'El doble es: 8'"
+        run: |
+          cd ejercicio3 && ./scanner3 < entrada.txt | grep -q 'El doble es: 8'
 
       # ── Ejercicio 4: Reconocedor de tokens ─────────────────────────
 
