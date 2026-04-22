@@ -6,6 +6,7 @@ on:
     paths:
       - "**/*.l"
       - "README.md"
+  workflow_dispatch:
 
 permissions:
   checks: write
